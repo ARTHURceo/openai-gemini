@@ -1,5 +1,5 @@
 name = "gemini"
-main = "src/worker.mjs"
+main = "dist/worker.mjs"
 compatibility_date = "2024-09-23"
 compatibility_flags = [ "nodejs_compat" ]
 
@@ -9,6 +9,11 @@ bucket = "./dist/client"
 [build]
 command = "pnpm install && pnpm run build"
 output_dir = "dist/client"
+watch_dir = "src"
+
+[routes]
+pattern = "/api/*"
+script = "dist/worker.mjs"
 
 [env.production]
 name = "gemini-prod"
