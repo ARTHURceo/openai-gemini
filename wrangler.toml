@@ -10,9 +10,8 @@ bucket = "./dist/client"
 command = "pnpm install && pnpm run build"
 watch_dir = "src"
 
-[[routes]]
-pattern = "/api/*"
-script = "dist/worker.mjs"
+# 移除 routes 配置，使用 workers_dev 代替
+workers_dev = true
 
 [env.production]
 name = "geminiapi-prod"
