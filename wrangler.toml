@@ -8,10 +8,9 @@ bucket = "./dist/client"
 
 [build]
 command = "pnpm install && pnpm run build"
-output_dir = "dist/client"
 watch_dir = "src"
 
-[routes]
+[[routes]]
 pattern = "/api/*"
 script = "dist/worker.mjs"
 
