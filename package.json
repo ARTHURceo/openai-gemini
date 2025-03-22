@@ -40,8 +40,8 @@
     "unocss": "0.50.8"
   },
   "scripts": {
-    "build": "astro build",
-    "deploy": "npx wrangler deploy src/worker.mjs --assets=./dist/client",
+    "build": "astro build && mkdir -p dist && cp src/worker.mjs dist/",
+    "deploy": "npx wrangler deploy dist/worker.mjs --assets=./dist/client",
     "start": "node node.mjs",
     "dev": "nodemon --watch node.mjs --watch src/*.mjs node.mjs",
     "preview": "astro preview",
