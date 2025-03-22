@@ -41,7 +41,7 @@
   },
   "scripts": {
     "build": "astro build && mkdir -p dist && cp src/worker.mjs dist/",
-    "deploy": "npx wrangler deploy dist/worker.mjs --assets=./dist/client",
+    "deploy": "npx wrangler deploy dist/worker.mjs --assets=./dist/client --routes='/api/*'",
     "start": "node node.mjs",
     "dev": "nodemon --watch node.mjs --watch src/*.mjs node.mjs",
     "preview": "astro preview",
