@@ -41,7 +41,7 @@
   },
   "scripts": {
     "build": "astro build",
-    "deploy": "npx wrangler deploy --assets=./dist",
+    "deploy": "npx wrangler deploy src/worker.mjs --assets=./dist/client",
     "start": "node node.mjs",
     "dev": "nodemon --watch node.mjs --watch src/*.mjs node.mjs",
     "preview": "astro preview",
