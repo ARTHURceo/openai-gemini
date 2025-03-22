@@ -4,11 +4,11 @@ compatibility_date = "2024-09-23"
 compatibility_flags = [ "nodejs_compat" ]
 
 [site]
-bucket = "./dist"
+bucket = "./dist/client"
 
 [build]
 command = "pnpm install && pnpm run build"
-output_dir = "dist"
+output_dir = "dist/client"
 
 [env.production]
 name = "gemini-prod"
