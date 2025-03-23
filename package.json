@@ -41,7 +41,7 @@
     "wrangler": "^4.4.0"
   },
   "scripts": {
-    "build": "astro build && mkdir -p dist && cp src/worker.mjs dist/",
+    "build": "mkdir -p dist && cp -r src/* dist/",
     "deploy": "npx wrangler deploy",
     "start": "node node.mjs",
     "dev": "nodemon --watch node.mjs --watch src/*.mjs node.mjs",
